@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Interview Preparation  Algorithms
+          Lockboxes
+"""
 def canUnlockAll(boxes):
     """
     Determines if all the boxes can be opened
