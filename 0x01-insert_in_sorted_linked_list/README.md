@@ -1,3 +1,3 @@
 # Insert in sorted linked list
 <hr>
->Specializations - Interview Preparation ― Algorithms
+> Specializations - Interview Preparation ― Algorithms
