@@ -2,8 +2,9 @@
 """
 In a text file, there is a single character H.
 Your text editor can execute only two operations in this file:
-Copy All and Paste. Given a number n, write a method that calculates 
-the fewest number of operations needed to result in exactly n H characters in the file.
+Copy All and Paste. Given a number n, write a method that calculates
+the fewest number of operations needed to result in exactly n H characters
+in the file.
 """
 
 
@@ -14,8 +15,7 @@ def minOperations(n):
     @pt  :: how many pt done
     @ctp :: how many chars to paste
     """
-
-    nH, cp, pt, ctp  = 1, 0, 0, 0
+    nH, cp, pt, ctp = 1, 0, 0, 0
 
     while (nH < n):
         # check for copy ops
