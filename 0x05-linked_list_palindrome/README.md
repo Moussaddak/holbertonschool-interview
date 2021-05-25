@@ -3,7 +3,7 @@
 
 > Specializations - Interview Preparation ― Algorithms
 
-# Technical interview preparation:
+## Technical interview preparation:
 
 <div>
     <p>
