@@ -40,6 +40,7 @@ try:
         if count == 10:
             count = 0
             print_stat(tsize, stat)
+     print_stat(tsize, stat)
 except KeyboardInterrupt:
     print_stat(tsize, stat)
     raise
