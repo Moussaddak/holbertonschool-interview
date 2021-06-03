@@ -41,5 +41,5 @@ try:
             count = 0
             print_stat(tsize, stat)
 except KeyboardInterrupt:
-    count = 0
     print_stat(tsize, stat)
+    raise
