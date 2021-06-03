@@ -16,7 +16,7 @@
                 <li><ul>Number of lines by status code:
                         <li>possible status code: 200, 301, 400, 401, 403, 404, 405 and 500</li>
                         <li>if a status code doesn't appear or is not an integer, don't print anything for this status code</li>
-                        <li>format: `<status code>: <number>`</li>
+                        <li>format: \<status code>: <number>`</li>
                         <li>status codes should be printed in ascending order</li>
                     </ul>
                 </li>
