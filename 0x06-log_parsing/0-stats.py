@@ -32,11 +32,11 @@ try:
         if r is None:
             continue
         status_code, fsize = r.group(1), r.group(2)
-        tsize += int(fsize)
         if status_code in code:
             stat[status_code] = stat.get(status_code, 0) + 1
         else:
             continue
+        tsize += int(fsize)
         if count == 10:
             count = 0
             print_stat(tsize, stat)
