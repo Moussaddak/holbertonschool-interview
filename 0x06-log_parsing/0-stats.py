@@ -20,7 +20,7 @@ def print_stat(fsize: int, stat: dict):
 
 protocol = r'"GET /projects/260 HTTP/1.1"'
 regex = "^[\d\w.?]+\s?-\s?\[[0-9-:\s.]+\]\s" + \
-    protocol + "\s([0-9]+)\s([0-9]+)$"
+    protocol + "\s([\w\d]+)\s([0-9]+)$"
 tsize = 0
 code = ["200", "301", "400", "401", "403", "404", "405", "500"]
 stat = {}
