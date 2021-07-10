@@ -9,7 +9,7 @@ def validUTF8(data):
         :type data: List[int]
         :rtype: bool
     """
-    
+
     count = 0
     for num in data:
         tmp = 1 << 7
