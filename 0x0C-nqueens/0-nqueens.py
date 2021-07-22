@@ -52,19 +52,18 @@ def printBoard(board: List[List[int]]) -> None:
     print(line)
 
 
-if __name__ == '__main__':
 
-    N = sys.argv
-    if len(N) != 2:
-        print("Usage: nqueens N")
-        sys.exit(1)
-    if N[1].isnumeric():
-        N = int(N[1])
-    else:
-        print("N must be a number")
-        sys.exit(1)
-    if N < 4:
-        print("N must be at least 4")
-        sys.exit(1)
-    board = [[0 for i in range(N)] for j in range(N)]
-    nQueen_R(board, 0, N)
+N = sys.argv
+if len(N) != 2:
+    print("Usage: nqueens N")
+    sys.exit(1)
+if N[1].isnumeric():
+    N = int(N[1])
+else:
+    print("N must be a number")
+    sys.exit(1)
+if N < 4:
+    print("N must be at least 4")
+    sys.exit(1)
+board = [[0 for i in range(N)] for j in range(N)]
+nQueen_R(board, 0, N)
