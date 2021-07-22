@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """N queens puzzle"""
 import sys
-from typing import List
 
 
-def isOK(board: List[List[int]], row: int, col: int, N: int) -> bool:
+def isOK(board, row: int, col: int, N: int) -> bool:
     """
     test
     """
@@ -22,7 +21,7 @@ def isOK(board: List[List[int]], row: int, col: int, N: int) -> bool:
     return True
 
 
-def nQueen_R(board: List[List[int]], col: int, N: int) -> bool:
+def nQueen_R(board, col: int, N: int) -> bool:
     """
     queen sol°
     """
@@ -40,7 +39,7 @@ def nQueen_R(board: List[List[int]], col: int, N: int) -> bool:
     return False
 
 
-def printBoard(board: List[List[int]]) -> None:
+def printBoard(board) -> None:
     """
     print
     """
@@ -52,10 +51,7 @@ def printBoard(board: List[List[int]]) -> None:
     print(line)
 
 
-def main():
-    """
-    main
-    """
+if __name__ == '__main__':
     N = sys.argv
     if len(N) != 2:
         print("Usage: nqueens N")
@@ -70,6 +66,3 @@ def main():
         sys.exit(1)
     board = [[0 for i in range(N)] for j in range(N)]
     nQueen_R(board, 0, N)
-
-if __name__ == '__main__':
-    main()
