@@ -9,15 +9,15 @@ def isOK(board: List[List[int]], row: int, col: int, N: int) -> bool:
     test
     """
     for i in range(col):
-        if board[row][i] + board[row][i + 1] == True:
+        if board[row][i] + board[row][i + 1] == 1:
             return False
 
     for i, j in zip(range(row, N, 1), range(col, -1, -1)):
-        if board[i][j] == True:
+        if board[i][j] == 1:
             return False
-        
+
     for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
-        if board[i][j] == True:
+        if board[i][j] == 1:
             return False
     return True
 
@@ -44,12 +44,10 @@ def printBoard(board: List[List[int]]) -> None:
     """
     print
     """
-    line: List[int] = []
-    x: int
-    c: int
+    line = []
     for x in board:
         for c in x:
-            if c == True:
+            if c == 1:
                 line.append([board.index(x), x.index(c)])
     print(line)
 
