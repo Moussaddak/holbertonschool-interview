@@ -9,22 +9,22 @@
  */
 avl_t *sorted_array_to_avl(int *array, size_t size)
 {
-    avl_t *root;
-    size_t middle;
+	avl_t *root;
+	size_t middle;
 
-    root = NULL;
+	root = NULL;
 
-    if (size == 0)
-        return (NULL);
+	if (size == 0)
+		return (NULL);
 
-    middle = (size % 2 == 0) ? (size / 2) - 1 : (size / 2);
+	middle = (size % 2 == 0) ? (size / 2) - 1 : (size / 2);
 
-    root = binary_tree_node(root, array[middle]);
+	root = binary_tree_node(root, array[middle]);
 
-    create_tree(&root, array, middle, Left);
-    create_tree(&root, array + middle + 1, (size - 1 - middle), Right);
+	create_tree(&root, array, middle, Left);
+	create_tree(&root, array + middle + 1, (size - 1 - middle), Right);
 
-    return (root);
+	return (root);
 }
 /**
  * binary_tree_node - creates a binary tree node
@@ -34,25 +34,25 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    binary_tree_t *new_node;
+	binary_tree_t *new_node;
 
-    new_node = malloc(sizeof(binary_tree_t));
-    if (!new_node)
-    {
-        return (NULL);
-    }
-    if (!parent)
-    {
-        new_node->parent = NULL;
-    }
-    else
-    {
-        new_node->parent = parent;
-    }
-    new_node->n = value;
-    new_node->left = NULL;
-    new_node->right = NULL;
-    return (new_node);
+	new_node = malloc(sizeof(binary_tree_t));
+	if (!new_node)
+	{
+		return (NULL);
+	}
+	if (!parent)
+	{
+		new_node->parent = NULL;
+	}
+	else
+	{
+		new_node->parent = parent;
+	}
+	new_node->n = value;
+	new_node->left = NULL;
+	new_node->right = NULL;
+	return (new_node);
 }
 /**
  * create_tree - creates an AVL tree with recursion
@@ -64,23 +64,25 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
  */
 void create_tree(avl_t **node, int *array, size_t size, int mode)
 {
-    size_t middle;
+	size_t middle;
 
-    if (size == 0)
-        return;
+	if (size == 0)
+		return;
 
-    middle = (size % 2 == 0) ? (size / 2) - 1 : (size / 2);
+	middle = (size % 2 == 0) ? (size / 2) - 1 : (size / 2);
 
-    if (mode == 1)
-    {
-        (*node)->left = binary_tree_node(*node, array[middle]);
-        create_tree(&((*node)->left), array, middle, Left);
-        create_tree(&((*node)->left), array + middle + 1, (size - 1 - middle), Right);
-    }
-    else
-    {
-        (*node)->right = binary_tree_node(*node, array[middle]);
-        create_tree(&((*node)->right), array, middle, Left);
-        create_tree(&((*node)->right), array + middle + 1, (size - 1 - middle), Right);
-    }
+	if (mode == 1)
+	{
+		(*node)->left = binary_tree_node(*node, array[middle]);
+		create_tree(&((*node)->left), array, middle, Left);
+		create_tree(&((*node)->left), array + middle + 1,
+			    (size - 1 - middle), Right);
+	}
+	else
+	{
+		(*node)->right = binary_tree_node(*node, array[middle]);
+		create_tree(&((*node)->right), array, middle, Left);
+		create_tree(&((*node)->right), array + middle + 1,
+			    (size - 1 - middle), Right);
+	}
 }
