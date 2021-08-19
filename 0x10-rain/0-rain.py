@@ -2,10 +2,9 @@
 """
      0. Rain task
 """
-from typing import List
 
 
-def rain(walls: List[int]) -> int:
+def rain(walls: list[int]) -> int:
     """
         calculate retained water after the rain
     :param walls:
