@@ -4,7 +4,7 @@
 """
 
 
-def rain(walls: list[int]) -> int:
+def rain(walls) -> int:
     """
         calculate retained water after the rain
     :param walls:
