@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-     0. Rain task
+    0. Rain task
 """
 from typing import List
 
