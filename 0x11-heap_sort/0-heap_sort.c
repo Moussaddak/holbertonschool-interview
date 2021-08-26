@@ -21,7 +21,7 @@ void swap(int *a, int *b)
  * @n: int
  * @i: int
  * @size: size_t
- * 
+ *
  */
 
 void doHeap(int table[], int n, int i, size_t size)
@@ -40,7 +40,7 @@ void doHeap(int table[], int n, int i, size_t size)
 	{
 		swap(&table[i], &table[max]);
 		print_array(table, size);
-		heapify(table, n, max, size);
+		doHeap(table, n, max, size);
 	}
 }
 
