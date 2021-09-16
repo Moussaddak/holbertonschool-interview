@@ -3,7 +3,7 @@
 /**
  * heapify - rebuild a heap
  * @root: root node of the heap
- * 
+ *
  */
 void heapify(binary_tree_t *root)
 {
@@ -53,7 +53,7 @@ binary_tree_t *get_last_node(heap_t *root)
 	int nodes = 0, size_heap = 0;
 	binary_tree_t *last_node = NULL;
 
-	size_heap = get_size(root);
+	size_heap = getSize(root);
 
 	for (nodes = 1; nodes <= size_heap; nodes <<= 1)
 		;
@@ -83,7 +83,7 @@ int heap_extract(heap_t **root)
 	if (root == NULL || *root == NULL)
 		return (0);
 	head_node = *root;
-	if (head_node->left == NULL && !head_node->right == NULL)
+	if (head_node->left == NULL && head_node->right == NULL)
 	{
 		num = head_node->n;
 		free(head_node);
@@ -96,7 +96,7 @@ int heap_extract(heap_t **root)
 
 	last_node = get_last_node(*root);
 
-	if (last_node->parent->left == last_node) 
+	if (last_node->parent->left == last_node)
 	{
 		last_node->parent->left = NULL;
 	}
