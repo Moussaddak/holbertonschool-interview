@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 		if (result[c - 1])
 			var = MAX(var, c - 1);
 	}
-	str = malloc(sizeof(char) * 1024);
+	str = malloc(sizeof(char) * 10240);
 	for (i = var; i >= 0; i--)
 		str[var - i] = result[i] + '0';
 	str[var + 1] = '\0';
